@@ -1,0 +1,14 @@
+# 
+*.a
+
+/TODO
+
+build/
+
+icons/
+
+img/
+
+logo/
+
+*.php
