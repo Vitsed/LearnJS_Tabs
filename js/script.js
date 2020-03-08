@@ -68,6 +68,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 minutes.textContent = t.minutes >= 10 ? t.minutes : '0' + t.minutes;
                 seconds.textContent = t.seconds >= 10 ? t.seconds : '0' + t.seconds;
             } else {
+                clearInterval(timeInterval);
                 hours.textContent = '00';
                 minutes.textContent = '00';
                 seconds.textContent = '00';
