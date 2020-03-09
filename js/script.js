@@ -79,4 +79,38 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     setClock('timer', deadline);
+
+    // Modal window
+
+    let more = document.querySelector('.more'),
+        overlay = document.querySelector('.overlay'),
+        close = document.querySelector('.popup-close'), 
+        container = document.getElementById('about');
+
+    // more.addEventListener('click', () => {
+    //     showModalWindow();
+    // });
+
+    close.addEventListener('click', () => closeModalWindow());
+
+    container.addEventListener('click', (event) => {
+        let target = event.target;
+        console.log('Произошло событие' + event.type + " на элементе " + target);
+        if(target.className == 'more' || target.className == 'description-btn') {
+            showModalWindow();
+        }
+    });
+
+
+    function showModalWindow() {
+        overlay.style.display = 'block';
+        this.classList.add('more-splash');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModalWindow() {
+        overlay.style.display = 'none';
+        this.classList.remove('more-splash');
+        document.body.style.overflow = '';
+    }
 });
