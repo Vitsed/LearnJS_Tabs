@@ -114,7 +114,7 @@ window.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = '';
     }
 
-    // технологии JSON AJAX   Form
+    // Обратная связь
 
     let message = {
         loading: 'Загрузка...',
