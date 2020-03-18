@@ -15,7 +15,7 @@ inputRub.addEventListener('input', () => {
             if (request.readyState === 4 && request.status == 200) {
                 resolve()
             } else {
-                reject("Что-то пошло не так")
+                reject()
             }
         })
         return promise;
